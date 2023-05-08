@@ -1,6 +1,4 @@
-import com.example.Animal;
 import com.example.Cat;
-import com.example.Predator;
 import com.example.Feline;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,7 +6,6 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.Mock;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
@@ -30,7 +27,7 @@ public class CatTest {
         Assert.assertEquals(cat.getSound(),expected);
     }
     @Test
-    public void CheckGetFoodOfCat() throws Exception {
+    public void checkGetFoodOfCat() throws Exception {
         Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         Assert.assertEquals(cat.getFood(),feline.eatMeat());
     }

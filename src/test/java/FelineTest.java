@@ -28,18 +28,18 @@ public class FelineTest {
 
 
     @Test
-    public void CheckGetKittensNoArguments(){
+    public void checkGetKittensNoArguments(){
         int expected = 1;
         Mockito.when(felineSpy.getKittens()).thenReturn(expected);
         Assert.assertEquals(felineSpy.getKittens(),expected);
     }
     @Test
-    public void CheckGetKittensWithArgument(){
+    public void checkGetKittensWithArgument(){
         int numberOfKitten = 3;
         Assert.assertEquals(feline.getKittens(numberOfKitten),numberOfKitten);
     }
     @Test
-    public void CheckFamily(){
+    public void checkFamily(){
         String expected = "Кошачьи";
         Assert.assertEquals(feline.getFamily(),expected);
     }
